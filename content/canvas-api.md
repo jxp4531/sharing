@@ -36,7 +36,6 @@
 @state: black, @fragment
 
 ##代替内容
-* 在canvas元素中使用替代内容
 ```html
   <canvas>Updata your browser to enjoy canvas!</canvas>
 ```
@@ -73,13 +72,24 @@
 
 ##设置Canvas样式
 ```html
-  <canvas id="diagonal" style="border:1px solid #dd0000;background:#f88" height="200" width="200"></canvas>
+  <canvas id="diagonal"></canvas>
+```
+```css
+   #diagonal{
+   	border:1px solid #dd0000;
+   	background:#f88;
+   	width:200px;
+   	height:200px;
+   }
 ```
 
 ---
 
-跳出兼容的惯性思维，在合适的场景使用更高级的布局方式。
+##DEMO
+
 <a class="jsbin-embed" href="http://jsbin.com/nemoho/4/embed">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+
+<script src="http://static.jsbin.com/js/embed.js"></script>
 
 ---
 
