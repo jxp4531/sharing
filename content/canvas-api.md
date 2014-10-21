@@ -61,7 +61,7 @@
 @state:black, @fragment
 
 ##隐形Canvas
-```html
+* ```html
 <canvas height="200" width="200"></canvas>
 ```
 ---
@@ -73,7 +73,7 @@
 <canvas id="diagonal"></canvas>
 ```
 
-```css
+* ```css
    #diagonal{
    	border:1px solid #dd0000;
    	background:#f88;
