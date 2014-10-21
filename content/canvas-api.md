@@ -28,15 +28,15 @@
 
 @state: black, @fragment
 
-* canvas坐标
-** 从左上角开始，x轴沿着水平方向向右延伸，y轴沿垂直方向向下延伸。左上角坐标为x=0,y=0的点乘坐原点。
+## canvas坐标
+* 从左上角开始，x轴沿着水平方向向右延伸，y轴沿垂直方向向下延伸。左上角坐标为x=0,y=0的点乘坐原点。
 
 ---
 
 @state: black, @fragment
 
-* 代替内容
-** 在canvas元素中使用替代内容
+##代替内容
+* 在canvas元素中使用替代内容
 ```html
   <canvas>Updata your browser to enjoy canvas!</canvas>
 ```
@@ -44,15 +44,17 @@
 
 @state: black, @fragment
 
-* 检测浏览器支持情况
+## 检测浏览器支持情况
 
 ```javascript
   try{
 	document.createElement('canvas').getContext('2d');
-	document.getElementById('diagonal').innerHTML = 'HTML5 Canvas is supported in your browser.';
+	document.getElementById('diagonal').innerHTML 
+	= 'HTML5 Canvas is supported in your browser.';
   }
   catch(e){
-  	document.getElementById('diagonal').innerHTML = 'HTML5 Canvas is not supported in your browser.';
+  	document.getElementById('diagonal').innerHTML 
+  	= 'HTML5 Canvas is not supported in your browser.';
   }
 ```
 ---
@@ -64,7 +66,6 @@
 ```html
   <canvas height="200" width="200"></canvas>
 ```
-* 以上代码会在页面上显示出一块200x200像素的隐藏区域
 
 ---
 
@@ -74,7 +75,6 @@
 ```html
   <canvas id="diagonal" style="border:1px solid #dd0000;background:#f88" height="200" width="200"></canvas>
 ```
-* 通过设置canvas的css属性，我们就可以看到这张画布的大小位置了。
 
 ---
 
