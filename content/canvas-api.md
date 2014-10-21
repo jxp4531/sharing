@@ -36,7 +36,7 @@
 @state: black, @fragment
 
 ##代替内容
-```html
+* ```html
   <canvas>Updata your browser to enjoy canvas!</canvas>
 ```
 ---
@@ -45,7 +45,7 @@
 
 ## 检测浏览器支持情况
 
-```javascript
+* ```javascript
   try{
 	document.createElement('canvas').getContext('2d');
 	document.getElementById('diagonal').innerHTML 
@@ -62,18 +62,14 @@
 
 ##隐形Canvas
 
-```html
-  <canvas height="200" width="200"></canvas>
-```
+* <canvas height="200" width="200"></canvas>
 
 ---
 
 @state:black, @fragment
 
 ##设置Canvas样式
-```html
-  <canvas id="diagonal"></canvas>
-```
+* <canvas id="diagonal"></canvas>
 ```css
    #diagonal{
    	border:1px solid #dd0000;
@@ -85,11 +81,9 @@
 
 ---
 
-##DEMO
+##画一条对角线
 
-<a class="jsbin-embed" href="http://jsbin.com/nemoho/4/embed">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
-
-<script src="http://static.jsbin.com/js/embed.js"></script>
+<iframe src="http://jsbin.com/nemoho/5/embed?" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 500px; height: 46px;"></iframe>
 
 ---
 
