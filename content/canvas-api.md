@@ -14,7 +14,7 @@
 
 ## Canvas 是什么？
 
-@state: @fragment
+@state: yellow, @fragment
 
 * 一块矩形画布
 * 可以用js控制，并绘图，制作动画
