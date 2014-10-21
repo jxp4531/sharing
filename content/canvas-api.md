@@ -61,15 +61,16 @@
 @state:black, @fragment
 
 ##隐形Canvas
-
-* <canvas height="200" width="200"></canvas>
-
+```html
+<canvas height="200" width="200"></canvas>
+```
 ---
 
 @state:black, @fragment
 
 ##设置Canvas样式
-* <canvas id="diagonal"></canvas>
+* ```html
+<canvas id="diagonal"></canvas>
 ```css
    #diagonal{
    	border:1px solid #dd0000;
@@ -83,7 +84,7 @@
 
 ##画一条对角线
 
-<iframe src="http://jsbin.com/nemoho/5/embed?" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 500px; height: 46px;"></iframe>
+<iframe src="http://jsbin.com/nemoho/5/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 500px; height: 46px;"></iframe>
 
 ---
 
