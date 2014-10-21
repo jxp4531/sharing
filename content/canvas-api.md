@@ -71,6 +71,8 @@
 ##设置Canvas样式
 * ```html
 <canvas id="diagonal"></canvas>
+```
+
 ```css
    #diagonal{
    	border:1px solid #dd0000;
