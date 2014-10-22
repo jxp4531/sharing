@@ -1,4 +1,4 @@
-# CSS3布局：新的可能
+# Canvas API 初探
 
 ---
 
@@ -6,353 +6,277 @@
 
 @state: blue, @fragment
 
-* **赵文博**
-* 奇舞团前端工程师
-* 在做联盟和CRM
-<p style="font-size:120%;margin-top:0.5em">
-	<a href="https://github.com/webzhao" target="_blank" title="Github"><i class="fa fa-github"></i></a>&nbsp;
-	<a href="http://www.flickr.com/photos/53827079@N06/" target="_blank" title="Flickr"><i class="fa-flickr"></i></a>&nbsp;
-	<a href="https://twitter.com/webzhao" target="_blank" title="Twitter"><i class="fa-twitter"></i></a>&nbsp;
-	<a href="http://cn.linkedin.com/pub/wenbo-zhao/29/7b1/514" target="_blank" title="Linkedin"><i class="fa-linkedin"></i></a>&nbsp;
-</p>
+* **Sandy**
+* 奇舞团前端
+* 支持问答项目组
 
 ---
 
-## 布局？
+## Canvas 是什么？
+
+@state: yellow, @fragment
+
+* 一块矩形画布
+* 可以用js控制，并绘图，制作动画
+* 不能获取其中的DOM结构
 
 ---
 
-* box model
-* float
-* position
+## 简单概念
 
 ---
 
-# No
+@state: black, @fragment
+
+## canvas坐标
+* 从左上角开始，x轴沿着水平方向向右延伸，y轴沿垂直方向向下延伸。左上角坐标为x=0,y=0的点乘坐原点。
 
 ---
 
-@fragment
+@state: black, @fragment
 
-##使用CSS3可以
+## 代替内容
+* ```html
+  <canvas>Updata your browser to enjoy canvas!</canvas>
+```
+---
 
-* 简化布局实现方式
-* 实现以前不能实现的布局方式
+@state: black, @fragment
+
+## 检测浏览器支持情况
+
+* ```javascript
+  try{
+	document.createElement('canvas').getContext('2d');
+	document.getElementById('diagonal').innerHTML 
+	= 'HTML5 Canvas is supported in your browser.';
+  }
+  catch(e){
+  	document.getElementById('diagonal').innerHTML 
+  	= 'HTML5 Canvas is not supported in your browser.';
+  }
+```
+---
+
+@state:black, @fragment
+
+## 隐形Canvas
+
+* ```html
+<canvas height="200" width="200"></canvas>
+```
 
 ---
 
-跳出兼容的惯性思维，在合适的场景使用更高级的布局方式。
+@state:black, @fragment
+
+## 设置Canvas样式
+
+* ```html
+<canvas id="diagonal"></canvas>
+```
+
+* ```css
+   #diagonal{
+   	border:1px solid #dd0000;
+   	background:#f88;
+   	width:200px;
+   	height:200px;
+   }
+```
 
 ---
+
+## 画一条对角线
+
+<iframe src="http://jsbin.com/nemoho/7/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
+
+---
+
+## 变换 — 画一条一样的对角线
+
+<iframe src="http://jsbin.com/nemoho/11/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
+
+---
+## 路径、描边、填充、填充矩形区域
+
+@state: purple, @fragment
+
+* beginPath()
+* moveTo()
+* lineTo()
+* closePath()
+* stroke()
+* fill()
+* fillRect()
+
+---
+
+## 路径、描边、填充、填充矩形区域 — 画一棵树
+
+<iframe src="http://jsbin.com/nemoho/28/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
+
+---
+
+## 绘制曲线函数
+
+* quadraticCurveTo(x1,y1,x2,y2)
+* 以当前坐标作为起点
+* 接受四个参数，分别是控制点和终点的坐标
+<img src="http://p4.qhimg.com/t01206d4cf079aa3ace.jpg" class="" id="" style="width:500px;height:500px;">
+
+---
+
+## 绘制曲线 — 画小路
+
+<iframe src="http://jsbin.com/nemoho/38/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px; "></iframe>
+
+---
+
+## 控制点
+
+* quadraticCurveTo(170, -50, 260, -190) — (控制点，终点)
+
+<img src="http://p4.qhimg.com/t01f89363a49172658f.png" class="" id="" style="width:398px;489px;" />
+
+---
+
+## 渐变
+
+```javascript
+//创建三阶水平渐变
+createLinearGradient(x1, y1, x2, y2)
+
+//在渐变对象上添加渐变点
+addColorStop(0,'#000') / addColorStop(1,'rgba(0, 0, 0, 0.5)')
+```
+---
+## 渐变 — 画树干
+
+<iframe src="http://jsbin.com/nemoho/42/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
+
+---
+
+## 放射性渐变
+
+createRadialGradient(x0, y0, r0, x1, y1, r1)
+
+P.S. 前三个参数代表以(x0, y0)为圆心，r0为半径的圆
+     后三个参数代表以(x1, y1)为圆心，r1为半径的圆
+     渐变会在两个圆中间的区域出现
+
+---
+
+### 放射性渐变demo
+
+<iframe src="http://jsbin.com/jilora/2/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
+
+---
+
+## 缩放
+
+@state: blue, @fragment
+
+* scale(2,3)
+* scale函数带有两个参数来分别代表在x，y两个维度的缩放值
+
+---
+
+## 缩放 — 画一棵两倍大的树
+
+<iframe src="http://jsbin.com/nemoho/46/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
+
+---
+
+## 一种变换的使用方法
+
+@state: blue, @fragment
+
+* 矩阵变换
+* ```javascript
+      //所有坐标都与矩阵相乘，进行拉伸变换
+      transform(1, 0, -0.5, 1, 0, 0)
+```
+
+---
+
+## 画树的阴影
+
+<iframe src="http://jsbin.com/nemoho/48/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
+
+---
+
+## 文本
+
+---
+
+## 属性和方法
+
+@state: blue, @fragment
+
+* font (可以设置大小字体)
+* textAlign（左右对齐方式）
+* textBaseline（上下对齐方式）
+* fillText('text', x, y, [maxwidth])
+* strokeText('text', x, y, [maxwidth])
+
+---
+
+## 阴影属性
+
+@state: blue, @fragment
+
+* shadowColor
+* shadowOffsetX
+* shadowOffsetY
+* shadowBlur
+
+---
+
+## canvas文本
+
+<iframe src="http://jsbin.com/nemoho/49/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 500px; height: 46px;"></iframe>
+
+---
+
+## 在canvas中插入图片
 
 @state: green
+```javascript
+//插入一张图
+drawImage(img, x, y, width, height)
 
-## box-sizing
+//创建一个图片填充、描边模式
+createPattern(img, 'repeat/repeat-x/repeat-y/no-repeat')
 
----
-
-@fragment
-
-<style type="text/css">
-.box-model {width: 10em;height: 6em;background:#09c;box-shadow:#f80 0 0 0px 2em, #690 0 0 0 4em, #999 0 0 0 6em; margin: 6em auto 7.5em auto!important}
-.box-model p {line-height: 2em; position: relative; top: -6em}
-</style>
-
-<div class="box-model"><p>margin box<br>border box<br>padding box<br>content box</p></div>
-
-box-sizing: content-box | padding-box | border-box
-
----
-
-* [Demo 1: 全屏页面和自适应表单](http://dabblet.com/gist/de697755292033c055e8)
-* [Demo 2: 自适应栅格](http://codepen.io/jason-kinney/pen/cKgzi?editors=110)
-
----
-
-### Bootstrap、Pure、Foundation大量使用
-
-```css
-*, *:before, *:after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
 ```
+---
+
+## 图片填充和旋转
+
+<iframe src="http://jsbin.com/jilora/7/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 500px; height: 46px;"></iframe>
 
 ---
 
-## box-sizing 浏览器支持
+##canvas图片应用
 
-<ul class="browser-support">
-    <li><img src="img/css3/ie.png" alt="IE">8+</li>
-    <li><img src="img/css3/firefox.png" alt="Firefox"></li>
-    <li><img src="img/css3/chrome.png" alt="Chrome"></li>
-    <li><img src="img/css3/opera.png" alt="Opera">7.0+</li>
-    <li><img src="img/css3/safari.png" alt="Safari">3.0+</li>
-    <li><img src="img/css3/ios.png" alt="iOS"></li>
-    <li><img src="img/css3/android.png" alt="Android">2.1+</li>
-<ul>
+@state: green, @fregment
+请听下次讲解~  =。=
 
 ---
-
-## display: table
-
-@fragment, @state: orange
-
-CSS 2.1
-
----
-
-```css
-display: table                /* <table>     */
-display: table-cell           /* <td>        */
-display: table-row            /* <tr>        */
-display: table-column         /* <col>       */
-display: table-column-group   /* <colgroup>  */
-display: table-footer-group   /* <tfoot>     */
-display: table-header-group   /* <thead>     */
-```
-
----
-
-## 使用表格布局的优点
-
-* 简洁灵活的多栏布局
-* 简单的等高解决方案
-* 简单的垂直居中
-* 防止一行内的元素折行
-
----
-
-* [Demo 1: 多栏布局](http://dabblet.com/gist/372edba1af0c2ef44adf)
-* [Demo 2: 强制一行显示](http://dabblet.com/gist/a8823614dc5cfd0f7394)
-* [Demo 3: 垂直居中](http://dabblet.com/gist/2528b21a7867023c2fed)
-
----
-
-## display: table 浏览器支持
-
-<ul class="browser-support">
-    <li><img src="img/css3/ie.png" alt="IE">8+</li>
-    <li><img src="img/css3/firefox.png" alt="Firefox"></li>
-    <li><img src="img/css3/chrome.png" alt="Chrome"></li>
-    <li><img src="img/css3/opera.png" alt="Opera">7.0+</li>
-    <li><img src="img/css3/safari.png" alt="Safari"></li>
-    <li><img src="img/css3/ios.png" alt="iOS"></li>
-    <li><img src="img/css3/android.png" alt="Android"></li>
-<ul>
-
----
-
-@state: purple
-
-## flexbox
-
----
-
-Flexbox可控制容器内的子元素：
-
-* 水平或垂直排成一行
-* 控制子元素对齐方式
-* 控制子元素的宽度/高度
-* 控制子元素显示顺序
-* 控制子元素是否折行
-
----
-
-Flexbox是W3C布局方面标准中的*终极武器*
-
----
-
-![axis](img/css3/axis.png)
-
----
-
-[Flexbox Demo](http://dabblet.com/gist/95e5b65622aeae4d031d)
-
----
-
-## 新旧标准
-
-* 2009年语法
-* 2012年语法
-
----
-
-```css
-.container {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-direction: normal;
-    -webkit-box-orient: horizontal;
-    -webkit-flex-direction: row;
-    flex-direction: row;
-    -webkit-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    justify-content: flex-start;
-    -webkit-align-content: stretch;
-    align-content: stretch;
-}
-```
-
----
-
-## Flexbox浏览器支持(2009标准)
-
-<ul class="browser-support">
-    <li><img src="img/css3/ie.png" alt="IE">10+</li>
-    <li><img src="img/css3/firefox.png" alt="Firefox"></li>
-    <li><img src="img/css3/chrome.png" alt="Chrome"></li>
-    <li><img src="img/css3/opera.png" alt="Opera">12.1+</li>
-    <li><img src="img/css3/safari.png" alt="Safari"></li>
-    <li><img src="img/css3/ios.png" alt="iOS"></li>
-    <li><img src="img/css3/android.png" alt="Android">2.1+</li>
-<ul>
-
----
-
-## Flexbox浏览器支持(2012标准)
-
-<ul class="browser-support">
-    <li><img src="img/css3/ie.png" alt="IE">11+</li>
-    <li><img src="img/css3/firefox.png" alt="Firefox">22+</li>
-    <li><img src="img/css3/chrome.png" alt="Chrome">21+</li>
-    <li><img src="img/css3/opera.png" alt="Opera">12.1+</li>
-    <li><img src="img/css3/safari.png" alt="Safari">6.1+</li>
-    <li><img src="img/css3/ios.png" alt="iOS">7.0+</li>
-    <li><img src="img/css3/android.png" alt="Android">4.4+</li>
-<ul>
-
----
-
-@state: purple
-
-# Multi-column Layout
-
----
-
-主要解决文字内容的多列展示，实现报纸杂志效果。
-
----
-
-[Demo](http://dabblet.com/gist/1e98898598d536015362)
-
----
-
-## 多列显示浏览器支持
-
-<ul class="browser-support">
-    <li><img src="img/css3/ie.png" alt="IE">10+</li>
-    <li><img src="img/css3/firefox.png" alt="Firefox"></li>
-    <li><img src="img/css3/chrome.png" alt="Chrome"></li>
-    <li><img src="img/css3/opera.png" alt="Opera">11.1+</li>
-    <li><img src="img/css3/safari.png" alt="Safari"></li>
-    <li><img src="img/css3/ios.png" alt="iOS"></li>
-    <li><img src="img/css3/android.png" alt="Android"></li>
-<ul>
-
----
-
-### CSS Region
-
----
-
-让内容依次流入不同的容器。
-
-![region](img/css3/region.png)
-
----
-
-```css
-.content {
-    /* 内容源流入到指定管道中 */
-    flow-into: <pipe-name>;
-}
-
-.region {
-    /* 从指定管道中读入内容 */
-    flow-from: <pipe-name>;
-}
-```
-
----
-
-[Demo](demos/css3/region.html)
-
----
-
-## CSS Region浏览器支持
-
-<ul class="browser-support">
-    <li><img src="img/css3/ie.png" alt="IE">10+</li>
-    <li><img src="img/css3/safari.png" alt="Safari">6.1+</li>
-    <li><img src="img/css3/ios.png" alt="iOS">7.1+</li>
-<ul>
-
----
-
-## CSS Shapes
-
----
-
-让内容在各种形状的容器内显示。
-
----
-
-```css
-.content {
-    /*
-     * shape-outside: 将内容在围绕在一个形状外面显示
-     * shape-inside: 将内容在一个形状内部显示
-     */
-    shape-outside: polygon( /* parameters */ );
-}
-```
-
----
-
-## 形状
-
-* circle( radius at position )
-* polygon( position, position, position ... )
-* ellipse( radius1, radius2 at position )
-* inset( top, right, bottom, left, border-radius )
-
----
-
-* [Demo](http://codepen.io/adobe/full/rmual)
-
----
-
-## CSS Shapes浏览器支持
-
-<ul class="browser-support">
-    <li><img src="img/css3/chrome.png" alt="Chrome">37+</li>
-    <li><img src="img/css3/safari.png" alt="Safari">8.0+</li>
-    <li><img src="img/css3/ios.png" alt="iOS">8.0+</li>
-<ul>
-
----
-
-@state: green
-
-<p style="font-size:6em"><i class="fa-comments"></i></p>
-
----
-
 @fragment
 
 ## 总结
 
-* box-sizing
-* display: table
-* flexbox
-* multiple column
-* css region
-* css shape
+* 路径
+* 描边
+* 填充
+* 变换
+* 缩放
+* 阴影
+* 绘制曲线
+* 文本
+* 图片
 
 ---
 
