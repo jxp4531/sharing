@@ -101,7 +101,7 @@
 ---
 ## 路径、描边、填充、填充矩形区域
 
-@state: purple, @fragment
+@state: blue, @fragment
 
 * beginPath()
 * moveTo()
@@ -121,7 +121,7 @@
 
 ## 绘制曲线函数
 
-@state: purple, @fragment
+@state: blue, @fragment
 
 * quadraticCurveTo(x1,y1,x2,y2)
 * 以当前坐标作为起点
@@ -153,7 +153,8 @@
 createLinearGradient(x1, y1, x2, y2)
 
 //在渐变对象上添加渐变点
-addColorStop(0,'#000') / addColorStop(1,'rgba(0, 0, 0, 0.5)')
+addColorStop(0,'#000') 
+addColorStop(1,'rgba(0, 0, 0, 0.5)')
 ```
 ---
 ## 渐变 — 画树干
@@ -176,7 +177,7 @@ createRadialGradient(x0, y0, r0, x1, y1, r1)
 
 ### 放射性渐变demo
 
-<iframe src="http://jsbin.com/jilora/2/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
+<iframe src="http://jsbin.com/hapumu/2/embed?" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
 
 ---
 
