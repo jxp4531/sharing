@@ -5,7 +5,7 @@
 ## whoami
 
 @state: blue, @fragment
-
+<img src="http://p2.qhimg.com/t0141dc172dee55e204.jpg" style="width:150px;height:150px;border-radius:100px;">
 * **Sandy**
 * 奇舞团前端
 * 支持问答项目组
@@ -85,19 +85,34 @@
 
 ##画一条对角线
 
-<iframe src="http://jsbin.com/nemoho/7/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 500px; height: 46px;"></iframe>
+<iframe src="http://jsbin.com/nemoho/7/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
 
 ---
 
 ##变换 — 画一条一样的对角线
 
-<iframe src="http://jsbin.com/nemoho/11/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 500px; height: 46px;"></iframe>
+<iframe src="http://jsbin.com/nemoho/11/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
+
+---
+##路径、描边、填充、填充矩形区域
+
+@state: purple, @fragment
+
+* beginPath()
+* moveTo()
+* lineTo()
+* closePath()
+
+* stroke()
+
+* fill()
+* fillRect()
 
 ---
 
 ##路径、描边、填充、填充矩形区域 — 画一棵树
 
-<iframe src="http://jsbin.com/nemoho/28/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 500px; height: 46px;"></iframe>
+<iframe src="http://jsbin.com/nemoho/28/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
 
 ---
 
@@ -112,13 +127,13 @@
 
 ##绘制曲线 — 画小路
 
-<iframe src="http://jsbin.com/nemoho/38/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 500px; height: 46px;"></iframe>
+<iframe src="http://jsbin.com/nemoho/38/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px; "></iframe>
 
 ---
 
 ##控制点分析
 
-* quadraticCurveTo(170,-50,260,-190) — (控制点，终点)
+* quadraticCurveTo(170, -50, 260, -190) — (控制点，终点)
 
 <img src="http://p4.qhimg.com/t01f89363a49172658f.png" class="" id="" style="width:398px;489px;" />
 
@@ -128,15 +143,15 @@
 
 ```javascript
 //创建三阶水平渐变
-createLinearGradient(x1,y1,x2,y2)
+createLinearGradient(x1, y1, x2, y2)
 
 //在渐变对象上添加渐变点
-addColorStop(0,'#000') / addColorStop(1,'rgba(0,0,0,0.5)')
+addColorStop(0,'#000') / addColorStop(1,'rgba(0, 0, 0, 0.5)')
 ```
 ---
 ##渐变 — 画树干
 
-<iframe src="http://jsbin.com/nemoho/42/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 500px; height: 46px;"></iframe>
+<iframe src="http://jsbin.com/nemoho/42/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
 
 ---
 
@@ -151,7 +166,7 @@ addColorStop(0,'#000') / addColorStop(1,'rgba(0,0,0,0.5)')
 
 ##缩放 — 画一棵两倍大的树
 
-<iframe src="http://jsbin.com/nemoho/46/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 500px; height: 46px;"></iframe>
+<iframe src="http://jsbin.com/nemoho/46/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
 
 ---
 
@@ -169,7 +184,7 @@ addColorStop(0,'#000') / addColorStop(1,'rgba(0,0,0,0.5)')
 
 ##画树的阴影
 
-<iframe src="http://jsbin.com/nemoho/48/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 500px; height: 46px;"></iframe>
+<iframe src="http://jsbin.com/nemoho/48/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
 
 ---
 
@@ -177,14 +192,14 @@ addColorStop(0,'#000') / addColorStop(1,'rgba(0,0,0,0.5)')
 
 @state: blue, @fragment
 
-###属性和方法
+* 属性和方法
 * font (可以设置大小字体)
 * textAlign（左右对齐方式）
 * textBaseline（上下对齐方式）
 * fillText('text', x, y, [maxwidth])
 * strokeText('text', x, y, [maxwidth])
 
-###阴影属性
+* 阴影属性
 * shadowColor
 * shadowOffsetX
 * shadowOffsetY
