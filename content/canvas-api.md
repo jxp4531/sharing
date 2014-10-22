@@ -2,68 +2,13 @@
 
 ---
 
+## whoami
+
 @state: blue, @fragment
 
-<style type="text/css">
-.reveal .slides h1,
-.reveal .slides h2,
-.reveal .slides h3,
-.reveal .slides h4,
-.reveal .slides p,
-.reveal .slides li {
-    font-family: Helvetica;
-}
-.self-intro .avatar {
-    display: inline-block;
-    width: 150px;
-    height: 150px;
-    border-radius: 100px;
-    background: url(http://p2.qhimg.com/t0141dc172dee55e204.jpg) no-repeat center center;
-    background-size: 213px;
-}
-.self-intro .name {
-    display: inline-block;
-    padding-left: 30px;
-    position: relative;
-    top: -45px;
-}
-.contact-list .fa{
-    font-size: 46px; 
-    padding-right: 10px;
-}
-
-.contact-list a {
-    color: white;
-}
-.reveal .wc-title {
-    color: #999;
-}
-.initial-web {
-    color: #0099CC;
-}
-.initial-component {
-    color: #669900;
-}
-.reveal .slides .today {
-    color: rgb(206, 21, 21);
-    font-size: 184px;
-    border: 8px solid rgb(206, 21, 21);
-    padding: 100px;
-    -webkit-transform: rotate(20deg);
-    display: block;
-    position: relative;
-    top: -230px;
-    background: rgba(255, 255, 255, 0.5);
-}
-</style>
-<div class="self-intro">
-    <span class="avatar"></span>
-    <h2 class="name">Sandy</h2>
-</div>
-<ul class="contact-list">
-    <li>问答@奇舞团.360</li>
-</ul>
-
+* **赵文博**
+* 奇舞团前端工程师
+* 在做联盟和CRM
 ---
 
 ## Canvas 是什么？
