@@ -262,7 +262,7 @@ createPattern(img, 'repeat/repeat-x/repeat-y/no-repeat')
 
 ## 图片填充和旋转
 
-<iframe src="http://jsbin.com/jilora/7/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 500px; height: 46px;"></iframe>
+<iframe src="http://jsbin.com/jilora/6/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 500px; height: 46px;"></iframe>
 
 ---
 
