@@ -6,9 +6,9 @@
 
 @state: blue, @fragment
 
-* **赵文博**
-* 奇舞团前端工程师
-* 在做联盟和CRM
+* **Sandy**
+* 奇舞团前端
+* 支持问答项目组
 ---
 
 ## Canvas 是什么？
@@ -89,13 +89,13 @@
 
 ---
 
-##变换————画一条一样的对角线
+##变换 — 画一条一样的对角线
 
 <iframe src="http://jsbin.com/nemoho/11/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 500px; height: 46px;"></iframe>
 
 ---
 
-##路径、描边、填充、填充矩形区域————画一棵树
+##路径、描边、填充、填充矩形区域 — 画一棵树
 
 <iframe src="http://jsbin.com/nemoho/28/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 500px; height: 46px;"></iframe>
 
@@ -110,7 +110,7 @@
 
 ---
 
-##绘制曲线————画小路
+##绘制曲线 — 画小路
 
 <iframe src="http://jsbin.com/nemoho/38/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 500px; height: 46px;"></iframe>
 
@@ -118,7 +118,7 @@
 
 ##控制点分析
 
-* quadraticCurveTo(170,-50,260,-190) —— (控制点，终点)
+* quadraticCurveTo(170,-50,260,-190) — (控制点，终点)
 
 <img src="http://p4.qhimg.com/t01f89363a49172658f.png" class="" id="" style="width:398px;489px;" />
 
@@ -134,7 +134,7 @@ createLinearGradient(x1,y1,x2,y2)
 addColorStop(0,'#000') / addColorStop(1,'rgba(0,0,0,0.5)')
 ```
 ---
-##渐变————画树干
+##渐变 — 画树干
 
 <iframe src="http://jsbin.com/nemoho/42/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 500px; height: 46px;"></iframe>
 
@@ -149,7 +149,7 @@ addColorStop(0,'#000') / addColorStop(1,'rgba(0,0,0,0.5)')
 
 ---
 
-##缩放 ———— 画一棵两倍大的树
+##缩放 — 画一棵两倍大的树
 
 <iframe src="http://jsbin.com/nemoho/46/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 500px; height: 46px;"></iframe>
 
