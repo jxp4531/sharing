@@ -6,11 +6,11 @@
 
 @state: blue, @fragment
 
-<img src="http://p4.qhimg.com/t01f6ebf368f3588844.png" class="" id="" style="width:150px;150px;border:1px solid blue;border-radius:80px;" />
-
 * **Sandy**
 * 奇舞团前端
 * 支持问答项目组
+
+<img src="http://p4.qhimg.com/t01f6ebf368f3588844.png" class="" id="" style="width:150px;150px;" />
 ---
 
 ## Canvas 是什么？
