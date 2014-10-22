@@ -261,6 +261,7 @@ createPattern(img, 'repeat/repeat-x/repeat-y/no-repeat')
 ##canvas图片应用
 
 @state: green, @fregment
+
 请听下次讲解~  =。=
 
 ---
