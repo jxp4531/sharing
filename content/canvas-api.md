@@ -5,7 +5,7 @@
 ## whoami
 
 @state: blue, @fragment
-<img src="http://p2.qhimg.com/t0141dc172dee55e204.jpg" style="width:150px;height:150px;border-radius:100px;" />
+
 * **Sandy**
 * 奇舞团前端
 * 支持问答项目组
