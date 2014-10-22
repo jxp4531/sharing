@@ -3,12 +3,66 @@
 ---
 
 ## whoami
-
 @state: blue, @fragment
+<style type="text/css">
+.reveal .slides h1,
+.reveal .slides h2,
+.reveal .slides h3,
+.reveal .slides h4,
+.reveal .slides p,
+.reveal .slides li {
+    font-family: Helvetica;
+}
+.self-intro .avatar {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    background: url(http://p2.qhimg.com/t0141dc172dee55e204.jpg) no-repeat center center;
+    background-size: 213px;
+}
+.self-intro .name {
+    display: inline-block;
+    padding-left: 30px;
+    position: relative;
+    top: -45px;
+}
+.contact-list .fa{
+    font-size: 46px; 
+    padding-right: 10px;
+}
 
-* **江雪**
-* 奇舞团前端
-* 目前支持问答项目
+.contact-list a {
+    color: white;
+}
+.reveal .wc-title {
+    color: #999;
+}
+.initial-web {
+    color: #0099CC;
+}
+.initial-component {
+    color: #669900;
+}
+.reveal .slides .today {
+    color: rgb(206, 21, 21);
+    font-size: 184px;
+    border: 8px solid rgb(206, 21, 21);
+    padding: 100px;
+    -webkit-transform: rotate(20deg);
+    display: block;
+    position: relative;
+    top: -230px;
+    background: rgba(255, 255, 255, 0.5);
+}
+</style>
+<div class="self-intro">
+    <span class="avatar"></span>
+    <h2 class="name">Sandy</h2>
+</div>
+<ul class="contact-list">
+    <li>问答@奇舞团.360</li>
+</ul>
 
 ---
 
@@ -90,295 +144,112 @@
 
 ---
 
-@state: green
+##变换————画一条一样的对角线
 
-## box-sizing
-
----
-
-@fragment
-
-<style type="text/css">
-.box-model {width: 10em;height: 6em;background:#09c;box-shadow:#f80 0 0 0px 2em, #690 0 0 0 4em, #999 0 0 0 6em; margin: 6em auto 7.5em auto!important}
-.box-model p {line-height: 2em; position: relative; top: -6em}
-</style>
-
-<div class="box-model"><p>margin box<br>border box<br>padding box<br>content box</p></div>
-
-box-sizing: content-box | padding-box | border-box
+<iframe src="http://jsbin.com/nemoho/11/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 500px; height: 46px;"></iframe>
 
 ---
 
-* [Demo 1: 全屏页面和自适应表单](http://dabblet.com/gist/de697755292033c055e8)
-* [Demo 2: 自适应栅格](http://codepen.io/jason-kinney/pen/cKgzi?editors=110)
+##路径、描边、填充、填充矩形区域————画一棵树
+
+<iframe src="http://jsbin.com/nemoho/28/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 500px; height: 46px;"></iframe>
 
 ---
 
-### Bootstrap、Pure、Foundation大量使用
+##绘制曲线函数
 
-```css
-*, *:before, *:after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
+* quadraticCurveTo(x1,y1,x2,y2)
+* 以当前坐标作为起点
+* 接受四个参数，分别是控制点和终点的坐标
+<img src="http://p4.qhimg.com/t01206d4cf079aa3ace.jpg" class="" id="" style="width:500px;height:500px;">
+
+---
+
+##绘制曲线————画小路
+
+<iframe src="http://jsbin.com/nemoho/38/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 500px; height: 46px;"></iframe>
+
+---
+
+##控制点分析
+
+* quadraticCurveTo(170,-50,260,-190) —— (控制点，终点)
+
+<img src="http://p4.qhimg.com/t01f89363a49172658f.png" class="" id="" style="width:398px;489px;" />
+
+---
+
+##渐变
+
+```javascript
+//创建三阶水平渐变
+createLinearGradient(x1,y1,x2,y2)
+
+//在渐变对象上添加渐变点
+addColorStop(0,'#000') / addColorStop(1,'rgba(0,0,0,0.5)')
+```
+---
+##渐变————画树干
+
+<iframe src="http://jsbin.com/nemoho/42/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 500px; height: 46px;"></iframe>
+
+---
+
+##缩放
+
+@state: blue, @fragment
+
+* scale(2,3)
+* scale函数带有两个参数来分别代表在x，y两个维度的缩放值
+
+---
+
+##缩放 ———— 画一棵两倍大的树
+
+<iframe src="http://jsbin.com/nemoho/46/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 500px; height: 46px;"></iframe>
+
+---
+
+##一种变换的使用方法
+
+@state: blue, @fragment
+
+* 矩阵变换
+* ```javascript
+      //所有坐标都与矩阵相乘，进行拉伸变换
+      transform(1, 0, -0.5, 1, 0, 0)
 ```
 
 ---
 
-## box-sizing 浏览器支持
+##画树的阴影
 
-<ul class="browser-support">
-    <li><img src="img/css3/ie.png" alt="IE">8+</li>
-    <li><img src="img/css3/firefox.png" alt="Firefox"></li>
-    <li><img src="img/css3/chrome.png" alt="Chrome"></li>
-    <li><img src="img/css3/opera.png" alt="Opera">7.0+</li>
-    <li><img src="img/css3/safari.png" alt="Safari">3.0+</li>
-    <li><img src="img/css3/ios.png" alt="iOS"></li>
-    <li><img src="img/css3/android.png" alt="Android">2.1+</li>
-<ul>
+<iframe src="http://jsbin.com/nemoho/48/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 500px; height: 46px;"></iframe>
 
 ---
 
-## display: table
+##文本
 
-@fragment, @state: orange
+@state: blue, @fragment
 
-CSS 2.1
+###属性和方法
+* font (可以设置大小字体)
+* textAlign（左右对齐方式）
+* textBaseline（上下对齐方式）
+* fillText('text', x, y, [maxwidth])
+* strokeText('text', x, y, [maxwidth])
 
----
-
-```css
-display: table                /* <table>     */
-display: table-cell           /* <td>        */
-display: table-row            /* <tr>        */
-display: table-column         /* <col>       */
-display: table-column-group   /* <colgroup>  */
-display: table-footer-group   /* <tfoot>     */
-display: table-header-group   /* <thead>     */
-```
-
----
-
-## 使用表格布局的优点
-
-* 简洁灵活的多栏布局
-* 简单的等高解决方案
-* 简单的垂直居中
-* 防止一行内的元素折行
+###阴影属性
+* shadowColor
+* shadowOffsetX
+* shadowOffsetY
+* shadowBlur
 
 ---
 
-* [Demo 1: 多栏布局](http://dabblet.com/gist/372edba1af0c2ef44adf)
-* [Demo 2: 强制一行显示](http://dabblet.com/gist/a8823614dc5cfd0f7394)
-* [Demo 3: 垂直居中](http://dabblet.com/gist/2528b21a7867023c2fed)
+##canvas文本
 
----
-
-## display: table 浏览器支持
-
-<ul class="browser-support">
-    <li><img src="img/css3/ie.png" alt="IE">8+</li>
-    <li><img src="img/css3/firefox.png" alt="Firefox"></li>
-    <li><img src="img/css3/chrome.png" alt="Chrome"></li>
-    <li><img src="img/css3/opera.png" alt="Opera">7.0+</li>
-    <li><img src="img/css3/safari.png" alt="Safari"></li>
-    <li><img src="img/css3/ios.png" alt="iOS"></li>
-    <li><img src="img/css3/android.png" alt="Android"></li>
-<ul>
-
----
-
-@state: purple
-
-## flexbox
-
----
-
-Flexbox可控制容器内的子元素：
-
-* 水平或垂直排成一行
-* 控制子元素对齐方式
-* 控制子元素的宽度/高度
-* 控制子元素显示顺序
-* 控制子元素是否折行
-
----
-
-Flexbox是W3C布局方面标准中的*终极武器*
-
----
-
-![axis](img/css3/axis.png)
-
----
-
-[Flexbox Demo](http://dabblet.com/gist/95e5b65622aeae4d031d)
-
----
-
-## 新旧标准
-
-* 2009年语法
-* 2012年语法
-
----
-
-```css
-.container {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-direction: normal;
-    -webkit-box-orient: horizontal;
-    -webkit-flex-direction: row;
-    flex-direction: row;
-    -webkit-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    justify-content: flex-start;
-    -webkit-align-content: stretch;
-    align-content: stretch;
-}
-```
-
----
-
-## Flexbox浏览器支持(2009标准)
-
-<ul class="browser-support">
-    <li><img src="img/css3/ie.png" alt="IE">10+</li>
-    <li><img src="img/css3/firefox.png" alt="Firefox"></li>
-    <li><img src="img/css3/chrome.png" alt="Chrome"></li>
-    <li><img src="img/css3/opera.png" alt="Opera">12.1+</li>
-    <li><img src="img/css3/safari.png" alt="Safari"></li>
-    <li><img src="img/css3/ios.png" alt="iOS"></li>
-    <li><img src="img/css3/android.png" alt="Android">2.1+</li>
-<ul>
-
----
-
-## Flexbox浏览器支持(2012标准)
-
-<ul class="browser-support">
-    <li><img src="img/css3/ie.png" alt="IE">11+</li>
-    <li><img src="img/css3/firefox.png" alt="Firefox">22+</li>
-    <li><img src="img/css3/chrome.png" alt="Chrome">21+</li>
-    <li><img src="img/css3/opera.png" alt="Opera">12.1+</li>
-    <li><img src="img/css3/safari.png" alt="Safari">6.1+</li>
-    <li><img src="img/css3/ios.png" alt="iOS">7.0+</li>
-    <li><img src="img/css3/android.png" alt="Android">4.4+</li>
-<ul>
-
----
-
-@state: purple
-
-# Multi-column Layout
-
----
-
-主要解决文字内容的多列展示，实现报纸杂志效果。
-
----
-
-[Demo](http://dabblet.com/gist/1e98898598d536015362)
-
----
-
-## 多列显示浏览器支持
-
-<ul class="browser-support">
-    <li><img src="img/css3/ie.png" alt="IE">10+</li>
-    <li><img src="img/css3/firefox.png" alt="Firefox"></li>
-    <li><img src="img/css3/chrome.png" alt="Chrome"></li>
-    <li><img src="img/css3/opera.png" alt="Opera">11.1+</li>
-    <li><img src="img/css3/safari.png" alt="Safari"></li>
-    <li><img src="img/css3/ios.png" alt="iOS"></li>
-    <li><img src="img/css3/android.png" alt="Android"></li>
-<ul>
-
----
-
-### CSS Region
-
----
-
-让内容依次流入不同的容器。
-
-![region](img/css3/region.png)
-
----
-
-```css
-.content {
-    /* 内容源流入到指定管道中 */
-    flow-into: <pipe-name>;
-}
-
-.region {
-    /* 从指定管道中读入内容 */
-    flow-from: <pipe-name>;
-}
-```
-
----
-
-[Demo](demos/css3/region.html)
-
----
-
-## CSS Region浏览器支持
-
-<ul class="browser-support">
-    <li><img src="img/css3/ie.png" alt="IE">10+</li>
-    <li><img src="img/css3/safari.png" alt="Safari">6.1+</li>
-    <li><img src="img/css3/ios.png" alt="iOS">7.1+</li>
-<ul>
-
----
-
-## CSS Shapes
-
----
-
-让内容在各种形状的容器内显示。
-
----
-
-```css
-.content {
-    /*
-     * shape-outside: 将内容在围绕在一个形状外面显示
-     * shape-inside: 将内容在一个形状内部显示
-     */
-    shape-outside: polygon( /* parameters */ );
-}
-```
-
----
-
-## 形状
-
-* circle( radius at position )
-* polygon( position, position, position ... )
-* ellipse( radius1, radius2 at position )
-* inset( top, right, bottom, left, border-radius )
-
----
-
-* [Demo](http://codepen.io/adobe/full/rmual)
-
----
-
-## CSS Shapes浏览器支持
-
-<ul class="browser-support">
-    <li><img src="img/css3/chrome.png" alt="Chrome">37+</li>
-    <li><img src="img/css3/safari.png" alt="Safari">8.0+</li>
-    <li><img src="img/css3/ios.png" alt="iOS">8.0+</li>
-<ul>
+<iframe src="http://jsbin.com/nemoho/49/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 500px; height: 46px;"></iframe>
 
 ---
 
