@@ -1,4 +1,4 @@
-# Canvas API：初探
+# Canvas API 初探
 
 ---
 
@@ -35,7 +35,7 @@
 
 @state: black, @fragment
 
-##代替内容
+## 代替内容
 * ```html
   <canvas>Updata your browser to enjoy canvas!</canvas>
 ```
@@ -60,15 +60,18 @@
 
 @state:black, @fragment
 
-##隐形Canvas
+## 隐形Canvas
+
 * ```html
 <canvas height="200" width="200"></canvas>
 ```
+
 ---
 
 @state:black, @fragment
 
-##设置Canvas样式
+## 设置Canvas样式
+
 * ```html
 <canvas id="diagonal"></canvas>
 ```
@@ -84,18 +87,18 @@
 
 ---
 
-##画一条对角线
+## 画一条对角线
 
 <iframe src="http://jsbin.com/nemoho/7/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
 
 ---
 
-##变换 — 画一条一样的对角线
+## 变换 — 画一条一样的对角线
 
 <iframe src="http://jsbin.com/nemoho/11/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
 
 ---
-##路径、描边、填充、填充矩形区域
+## 路径、描边、填充、填充矩形区域
 
 @state: purple, @fragment
 
@@ -103,21 +106,19 @@
 * moveTo()
 * lineTo()
 * closePath()
-
 * stroke()
-
 * fill()
 * fillRect()
 
 ---
 
-##路径、描边、填充、填充矩形区域 — 画一棵树
+## 路径、描边、填充、填充矩形区域 — 画一棵树
 
 <iframe src="http://jsbin.com/nemoho/28/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
 
 ---
 
-##绘制曲线函数
+## 绘制曲线函数
 
 * quadraticCurveTo(x1,y1,x2,y2)
 * 以当前坐标作为起点
@@ -126,13 +127,13 @@
 
 ---
 
-##绘制曲线 — 画小路
+## 绘制曲线 — 画小路
 
 <iframe src="http://jsbin.com/nemoho/38/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px; "></iframe>
 
 ---
 
-##控制点分析
+## 控制点
 
 * quadraticCurveTo(170, -50, 260, -190) — (控制点，终点)
 
@@ -140,7 +141,7 @@
 
 ---
 
-##渐变
+## 渐变
 
 ```javascript
 //创建三阶水平渐变
@@ -150,13 +151,13 @@ createLinearGradient(x1, y1, x2, y2)
 addColorStop(0,'#000') / addColorStop(1,'rgba(0, 0, 0, 0.5)')
 ```
 ---
-##渐变 — 画树干
+## 渐变 — 画树干
 
 <iframe src="http://jsbin.com/nemoho/42/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
 
 ---
 
-##放射性渐变
+## 放射性渐变
 
 createRadialGradient(x0, y0, r0, x1, y1, r1)
 
@@ -166,13 +167,13 @@ P.S. 前三个参数代表以(x0, y0)为圆心，r0为半径的圆
 
 ---
 
-###放射性渐变demo
+### 放射性渐变demo
 
 <iframe src="http://jsbin.com/jilora/2/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
 
 ---
 
-##缩放
+## 缩放
 
 @state: blue, @fragment
 
@@ -181,13 +182,13 @@ P.S. 前三个参数代表以(x0, y0)为圆心，r0为半径的圆
 
 ---
 
-##缩放 — 画一棵两倍大的树
+## 缩放 — 画一棵两倍大的树
 
 <iframe src="http://jsbin.com/nemoho/46/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
 
 ---
 
-##一种变换的使用方法
+## 一种变换的使用方法
 
 @state: blue, @fragment
 
@@ -199,24 +200,32 @@ P.S. 前三个参数代表以(x0, y0)为圆心，r0为半径的圆
 
 ---
 
-##画树的阴影
+## 画树的阴影
 
 <iframe src="http://jsbin.com/nemoho/48/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
 
 ---
 
-##文本
+## 文本
+
+---
 
 @state: blue, @fragment
 
-* 属性和方法
+## 属性和方法
+
 * font (可以设置大小字体)
 * textAlign（左右对齐方式）
 * textBaseline（上下对齐方式）
 * fillText('text', x, y, [maxwidth])
 * strokeText('text', x, y, [maxwidth])
 
-* 阴影属性
+---
+
+@state: blue, @fragment
+
+## 阴影属性
+
 * shadowColor
 * shadowOffsetX
 * shadowOffsetY
@@ -224,13 +233,13 @@ P.S. 前三个参数代表以(x0, y0)为圆心，r0为半径的圆
 
 ---
 
-##canvas文本
+## canvas文本
 
 <iframe src="http://jsbin.com/nemoho/49/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 500px; height: 46px;"></iframe>
 
 ---
 
-##在canvas中插入图片
+## 在canvas中插入图片
 
 @state: green
 ```javascript
@@ -241,10 +250,9 @@ drawImage(img, x, y, width, height)
 createPattern(img, 'repeat/repeat-x/repeat-y/no-repeat')
 
 ```
-
 ---
 
-##图片填充和旋转
+## 图片填充和旋转
 
 <iframe src="http://jsbin.com/jilora/7/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 500px; height: 46px;"></iframe>
 
