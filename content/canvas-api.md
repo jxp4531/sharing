@@ -4,7 +4,7 @@
 
 ## About Me
 
-@state：blue, @fragment
+@state: blue, @fragment
 
 * **Sandy**
 * 奇舞团前端
