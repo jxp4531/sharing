@@ -33,17 +33,19 @@
 
 ---
 
+## 代替内容
+
 @state: black, @fragment
 
-## 代替内容
 * ```html
   <canvas>Updata your browser to enjoy canvas!</canvas>
 ```
 ---
 
+## 检测浏览器支持情况
+
 @state: black, @fragment
 
-## 检测浏览器支持情况
 
 * ```javascript
   try{
@@ -58,9 +60,9 @@
 ```
 ---
 
-@state:black, @fragment
-
 ## 隐形Canvas
+
+@state:black, @fragment
 
 * ```html
 <canvas height="200" width="200"></canvas>
@@ -68,9 +70,9 @@
 
 ---
 
-@state:black, @fragment
-
 ## 设置Canvas样式
+
+@state:black, @fragment
 
 * ```html
 <canvas id="diagonal"></canvas>
@@ -120,6 +122,8 @@
 
 ## 绘制曲线函数
 
+@state: purple, @fragment
+
 * quadraticCurveTo(x1,y1,x2,y2)
 * 以当前坐标作为起点
 * 接受四个参数，分别是控制点和终点的坐标
@@ -134,6 +138,8 @@
 ---
 
 ## 控制点
+
+@state: purple, @fragment
 
 * quadraticCurveTo(170, -50, 260, -190) — (控制点，终点)
 
@@ -241,7 +247,8 @@ P.S. 前三个参数代表以(x0, y0)为圆心，r0为半径的圆
 
 ## 在canvas中插入图片
 
-@state: green
+@state: green, @fragment
+
 ```javascript
 //插入一张图
 drawImage(img, x, y, width, height)
