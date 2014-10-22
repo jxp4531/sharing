@@ -114,7 +114,7 @@
 
 ## 路径、描边、填充、填充矩形区域 — 画一棵树
 
-<iframe src="http://jsbin.com/nemoho/28/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
+
 
 ---
 
