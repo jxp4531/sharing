@@ -6,6 +6,8 @@
 
 @state: blue, @fragment
 
+<img src="http://p4.qhimg.com/t01f6ebf368f3588844.png" class="" id="" style="width:150px;150px;border:1px solid blue;border-radius:80px;" />
+
 * **Sandy**
 * 奇舞团前端
 * 支持问答项目组
@@ -155,6 +157,22 @@ addColorStop(0,'#000') / addColorStop(1,'rgba(0, 0, 0, 0.5)')
 
 ---
 
+##放射性渐变
+
+createRadialGradient(x0, y0, r0, x1, y1, r1)
+
+P.S. 前三个参数代表以(x0, y0)为圆心，r0为半径的圆
+     后三个参数代表以(x1, y1)为圆心，r1为半径的圆
+     渐变会在两个圆中间的区域出现
+
+---
+
+###放射性渐变demo
+
+<iframe src="http://jsbin.com/jilora/2/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
+
+---
+
 ##缩放
 
 @state: blue, @fragment
@@ -213,22 +231,45 @@ addColorStop(0,'#000') / addColorStop(1,'rgba(0, 0, 0, 0.5)')
 
 ---
 
-@state: green
+##在canvas中插入图片
 
-<p style="font-size:6em"><i class="fa-comments"></i></p>
+@state: green
+```javascript
+//插入一张图
+drawImage(img, x, y, width, height)
+
+//创建一个图片填充、描边模式
+createPattern(img, 'repeat/repeat-x/repeat-y/no-repeat')
+
+```
 
 ---
 
+##图片填充和旋转
+
+<iframe src="http://jsbin.com/jilora/7/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 500px; height: 46px;"></iframe>
+
+---
+
+##canvas图片应用
+
+@state: green, @fregment
+请听下次讲解~  =。=
+
+---
 @fragment
 
 ## 总结
 
-* box-sizing
-* display: table
-* flexbox
-* multiple column
-* css region
-* css shape
+* 路径
+* 描边
+* 填充
+* 变换
+* 缩放
+* 阴影
+* 绘制曲线
+* 文本
+* 图片
 
 ---
 
