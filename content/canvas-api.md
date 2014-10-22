@@ -114,7 +114,7 @@
 
 ## 路径、描边、填充、填充矩形区域 — 画一棵树
 
-
+<iframe src="http://jsbin.com/nemoho/28/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
 
 ---
 
@@ -210,9 +210,9 @@ P.S. 前三个参数代表以(x0, y0)为圆心，r0为半径的圆
 
 ---
 
-@state: blue, @fragment
-
 ## 属性和方法
+
+@state: blue, @fragment
 
 * font (可以设置大小字体)
 * textAlign（左右对齐方式）
@@ -222,9 +222,9 @@ P.S. 前三个参数代表以(x0, y0)为圆心，r0为半径的圆
 
 ---
 
-@state: blue, @fragment
-
 ## 阴影属性
+
+@state: blue, @fragment
 
 * shadowColor
 * shadowOffsetX
