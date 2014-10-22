@@ -2,8 +2,8 @@
 
 ---
 
-## whoami
 @state: blue, @fragment
+
 <style type="text/css">
 .reveal .slides h1,
 .reveal .slides h2,
