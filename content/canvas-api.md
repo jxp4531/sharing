@@ -14,7 +14,7 @@
 
 ## Canvas 是什么？
 
-@state: yellow, @fragment
+@state: @fragment
 
 * 一块矩形画布
 * 可以用js控制，并绘图，制作动画
@@ -138,7 +138,7 @@
 
 ## 控制点
 
-@state: purple, @fragment
+@state: black, @fragment
 
 * quadraticCurveTo(170, -50, 260, -190) — (控制点，终点)
 
