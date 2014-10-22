@@ -4,7 +4,7 @@
 
 ## About Me
 
-@state: blue, @fragment
+@state：blue, @fragment
 
 * **Sandy**
 * 奇舞团前端
@@ -46,7 +46,6 @@
 
 @state: black, @fragment
 
-
 * ```javascript
   try{
 	document.createElement('canvas').getContext('2d');
@@ -62,7 +61,7 @@
 
 ## 隐形Canvas
 
-@state:black, @fragment
+@state: black, @fragment
 
 * ```html
 <canvas height="200" width="200"></canvas>
@@ -72,7 +71,7 @@
 
 ## 设置Canvas样式
 
-@state:black, @fragment
+@state: black, @fragment
 
 * ```html
 <canvas id="diagonal"></canvas>
@@ -255,7 +254,6 @@ drawImage(img, x, y, width, height)
 
 //创建一个图片填充、描边模式
 createPattern(img, 'repeat/repeat-x/repeat-y/no-repeat')
-
 ```
 ---
 
@@ -267,7 +265,7 @@ createPattern(img, 'repeat/repeat-x/repeat-y/no-repeat')
 
 ##canvas图片应用
 
-@state: green, @fregment
+@state: green, @fragment
 
 请听下次讲解~  =。=
 
