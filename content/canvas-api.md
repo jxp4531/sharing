@@ -14,7 +14,7 @@
 
 ## Canvas 是什么？
 
-@state: @fragment
+@state: black, @fragment
 
 * 一块矩形画布
 * 可以用js控制，并绘图，制作动画
@@ -159,7 +159,7 @@ addColorStop(1,'rgba(0, 0, 0, 0.5)')
 ---
 ## 渐变 — 画树干
 
-<iframe src="http://jsbin.com/nemoho/42/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
+<iframe src="http://jsbin.com/nemoho/41/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
 
 ---
 
@@ -177,7 +177,7 @@ createRadialGradient(x0, y0, r0, x1, y1, r1)
 
 ### 放射性渐变demo
 
-<iframe src="http://jsbin.com/hapumu/2/embed?" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
+<iframe src="http://jsbin.com/hapumu/2/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
 
 ---
 
@@ -192,7 +192,7 @@ createRadialGradient(x0, y0, r0, x1, y1, r1)
 
 ## 缩放 — 画一棵两倍大的树
 
-<iframe src="http://jsbin.com/nemoho/46/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
+<iframe src="http://jsbin.com/nemoho/45/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
 
 ---
 
