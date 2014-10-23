@@ -161,6 +161,7 @@
 * quadraticCurveTo(x1, y1, x2, y2)
 * 以当前坐标作为起点
 * 接受四个参数，分别是控制点(x1, y1)和终点(x2, y2)的坐标
+
 <img src="http://p4.qhimg.com/t01206d4cf079aa3ace.jpg" class="" id="" style="width:500px;height:500px;">
 
 ---
@@ -303,7 +304,7 @@ createPattern(img, 'repeat/repeat-x/repeat-y/no-repeat')
 
 ## 图片填充和旋转
 
-<iframe src="http://jsbin.com/jilora/6/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
+<iframe src="http://jsbin.com/rolima/2/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
 
 ---
 
