@@ -59,9 +59,9 @@
 ```
 ---
 
-## 隐形Canvas
+## Canvas画布
 
-@state: black, @fragment
+@state: blue, @fragment
 
 * ```html
 <canvas height="200" width="200"></canvas>
@@ -87,17 +87,21 @@
 ```
 ---
 
-## 路径、描边、填充、填充矩形区域
+## 一块Canvas画布
+
+<iframe src="http://jsbin.com/zenim/2/embed??js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
+
+---
+
+## 路径
 
 @state: blue, @fragment
 
-* beginPath()
-* moveTo()
-* lineTo()
-* closePath()
-* stroke()
-* fill()
-* fillRect()
+* beginPath() 【创建路径】
+* moveTo()    【移动起点】
+* lineTo()    【指定终点】
+* closePath() 【闭合路径】
+* stroke()    【绘制路径】
 
 ---
 
@@ -107,19 +111,52 @@
 
 ---
 
-## 变换 — 画一条一样的对角线
+## 变换
+
+@state: blue, @fragment
+
+*```javascript
+ //保存画布
+ context.save();
+ 
+ //将画布原点移动到点(x, y)
+ context.translate(x, y);
+ 
+ //···其他操作···
+ 
+ //恢复画布初始位置
+ context.restore();
+```
+
+
+---
+
+## 画一条一样的对角线
 
 <iframe src="http://jsbin.com/nemoho/11/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
 
 ---
 
-## 路径、描边、填充、填充矩形区域 — 画一棵树
+## 其他方法和属性
+
+@state: blue, @fragment
+
+* fill()      【填充路径】
+* fillRect()  【填充矩形区域】
+
+* fillStyle   【填充样式】
+* strokeStyle 【描边样式】
+* lineWidth   【描边宽度】
+
+---
+
+## 画一棵树
 
 <iframe src="http://jsbin.com/nemoho/27/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
 
 ---
 
-## 绘制曲线函数
+## 曲线函数
 
 @state: blue, @fragment
 
@@ -130,7 +167,7 @@
 
 ---
 
-## 绘制曲线 — 画小路
+## 绘制蜿蜒小路
 
 <iframe src="http://jsbin.com/nemoho/38/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px; "></iframe>
 
@@ -161,7 +198,7 @@ addColorStop(0,'#000')
 addColorStop(1,'rgba(0, 0, 0, 0.5)')
 ```
 ---
-## 渐变 — 画树干
+## 画渐变树干
 
 <iframe src="http://jsbin.com/nemoho/41/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
 
@@ -194,7 +231,7 @@ createRadialGradient(x0, y0, r0, x1, y1, r1)
 
 ---
 
-## 缩放 — 画一棵两倍大的树
+## 画一棵两倍大的树
 
 <iframe src="http://jsbin.com/nemoho/45/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
 
@@ -218,13 +255,13 @@ createRadialGradient(x0, y0, r0, x1, y1, r1)
 
 ---
 
-## 文本
+## Canvas文本
 
 @state: blue, @fragment
 
 ---
 
-## 属性和方法
+## 文本属性和方法
 
 @state: black, @fragment
 
@@ -247,7 +284,7 @@ createRadialGradient(x0, y0, r0, x1, y1, r1)
 
 ---
 
-## canvas文本
+## 绘制文本
 
 <iframe src="http://jsbin.com/nemoho/49/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 500px; height: 46px;"></iframe>
 
@@ -261,7 +298,7 @@ createRadialGradient(x0, y0, r0, x1, y1, r1)
 //插入一张图
 drawImage(img, x, y, width, height)
 
-//创建一个图片填充、描边模式
+//创建一个图片填充/描边模式
 createPattern(img, 'repeat/repeat-x/repeat-y/no-repeat')
 ```
 ---
