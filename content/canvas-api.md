@@ -89,7 +89,7 @@
 
 ## 一块Canvas画布
 
-<iframe src="http://jsbin.com/zenim/2/embed??js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
+<iframe src="http://jsbin.com/zenim/2/embed?html,output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
 
 ---
 
