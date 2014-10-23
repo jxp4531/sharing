@@ -63,8 +63,9 @@
 
 @state: blue, @fragment
 
-* <canvas height="200" width="200"></canvas>
-
+```html
+	<canvas height="200" width="200"></canvas>
+```
 
 ---
 
