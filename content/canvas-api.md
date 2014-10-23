@@ -142,7 +142,6 @@
 
 * fill()      【填充路径】
 * fillRect()  【填充矩形区域】
-
 * fillStyle   【填充样式】
 * strokeStyle 【描边样式】
 * lineWidth   【描边宽度】
@@ -188,7 +187,7 @@
 
 @state: blue, @fragment
 
-* ```javascript
+```javascript
 //创建三阶水平渐变
 createLinearGradient(x1, y1, x2, y2)
 
@@ -285,7 +284,7 @@ createRadialGradient(x0, y0, r0, x1, y1, r1)
 
 ## 绘制文本
 
-<iframe src="http://jsbin.com/nemoho/49/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 500px; height: 46px;"></iframe>
+<iframe src="http://jsbin.com/nemoho/49/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
 
 ---
 
@@ -293,7 +292,7 @@ createRadialGradient(x0, y0, r0, x1, y1, r1)
 
 @state: green, @fragment
 
-* ```javascript
+ ```javascript
 //插入一张图
 drawImage(img, x, y, width, height)
 
@@ -304,7 +303,7 @@ createPattern(img, 'repeat/repeat-x/repeat-y/no-repeat')
 
 ## 图片填充和旋转
 
-<iframe src="http://jsbin.com/jilora/6/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 500px; height: 46px;"></iframe>
+<iframe src="http://jsbin.com/jilora/6/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
 
 ---
 
