@@ -115,7 +115,7 @@
 
 @state: blue, @fragment
 
-*```javascript
+```javascript
  //保存画布
  context.save();
  
@@ -127,7 +127,6 @@
  //恢复画布初始位置
  context.restore();
 ```
-
 
 ---
 
