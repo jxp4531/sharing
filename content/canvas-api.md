@@ -85,20 +85,8 @@
    	height:200px;
    }
 ```
-
 ---
 
-## 画一条对角线
-
-<iframe src="http://jsbin.com/nemoho/7/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
-
----
-
-## 变换 — 画一条一样的对角线
-
-<iframe src="http://jsbin.com/nemoho/11/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
-
----
 ## 路径、描边、填充、填充矩形区域
 
 @state: blue, @fragment
@@ -113,9 +101,21 @@
 
 ---
 
+## 画一条对角线
+
+<iframe src="http://jsbin.com/nemoho/7/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
+
+---
+
+## 变换 — 画一条一样的对角线
+
+<iframe src="http://jsbin.com/nemoho/11/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
+
+---
+
 ## 路径、描边、填充、填充矩形区域 — 画一棵树
 
-<iframe src="http://jsbin.com/nemoho/28/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
+<iframe src="http://jsbin.com/nemoho/27/embed?js" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
 
 ---
 
@@ -123,9 +123,9 @@
 
 @state: blue, @fragment
 
-* quadraticCurveTo(x1,y1,x2,y2)
+* quadraticCurveTo(x1, y1, x2, y2)
 * 以当前坐标作为起点
-* 接受四个参数，分别是控制点和终点的坐标
+* 接受四个参数，分别是控制点(x1, y1)和终点(x2, y2)的坐标
 <img src="http://p4.qhimg.com/t01206d4cf079aa3ace.jpg" class="" id="" style="width:500px;height:500px;">
 
 ---
@@ -136,11 +136,13 @@
 
 ---
 
-## 控制点
+## 控制点分析
 
 @state: black, @fragment
 
-* quadraticCurveTo(170, -50, 260, -190) — (控制点，终点)
+* 曲线函数 —— quadraticCurveTo(170, -50, 260, -190)
+* 起点 —— (-10, 350)
+* 控制点, 终点 ——  (170, -50) , (260, -190)
 
 <img src="http://p4.qhimg.com/t01f89363a49172658f.png" class="" id="" style="width:398px;489px;" />
 
@@ -148,7 +150,9 @@
 
 ## 渐变
 
-```javascript
+@state: blue, @fragment
+
+* ```javascript
 //创建三阶水平渐变
 createLinearGradient(x1, y1, x2, y2)
 
@@ -165,7 +169,7 @@ addColorStop(1,'rgba(0, 0, 0, 0.5)')
 
 ## 放射性渐变
 
-@state: pink, @fragment
+@state: blue, @fragment
 
 createRadialGradient(x0, y0, r0, x1, y1, r1)
 
@@ -216,11 +220,13 @@ createRadialGradient(x0, y0, r0, x1, y1, r1)
 
 ## 文本
 
+@state: blue, @fragment
+
 ---
 
 ## 属性和方法
 
-@state: blue, @fragment
+@state: black, @fragment
 
 * font (可以设置大小字体)
 * textAlign（左右对齐方式）
@@ -232,7 +238,7 @@ createRadialGradient(x0, y0, r0, x1, y1, r1)
 
 ## 阴影属性
 
-@state: blue, @fragment
+@state: black, @fragment
 
 * shadowColor
 * shadowOffsetX
@@ -251,7 +257,7 @@ createRadialGradient(x0, y0, r0, x1, y1, r1)
 
 @state: green, @fragment
 
-```javascript
+* ```javascript
 //插入一张图
 drawImage(img, x, y, width, height)
 
