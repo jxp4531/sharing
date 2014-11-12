@@ -1,4 +1,4 @@
-# Canvas API 初探
+# 三角学和坐标系
 
 ---
 
@@ -6,57 +6,75 @@
 
 @state: blue, @fragment
 
-* **Sandy**
+* **靳晓培**
 * 奇舞团前端
 * 支持问答项目组
 
 ---
+## 数学是什么？
 
-## Canvas 是什么？
 
-@state: black, @fragment
 
-* 一块矩形画布
-* 可以用js控制，并绘图，制作动画
-* 不能获取其中的DOM结构
 
----
+![Alt text](./1415781064771.png)
 
-## 简单概念
+
+
 
 ---
 
-@state: black, @fragment
+## 勾股定理
 
-## canvas坐标
-* 从左上角开始，x轴沿着水平方向向右延伸，y轴沿垂直方向向下延伸。左上角坐标为x=0,y=0的点乘坐原点。
+@state: blue, @fragment
+
+
+
+
+* ![Alt text](./1415781544837.png)
+
+
+
 
 ---
 
-## 代替内容
+## 两点之间的距离
 
 @state: black, @fragment
 
-* ```html
-  <canvas>Updata your browser to enjoy canvas!</canvas>
+* ![Alt text](./1415782252917.png)
+* ![Alt text](./1415782294068.png)
+* ```javascript
+ var d = Math.sqrt(dx*dx + dy*dy);
+```
+* ```javascript
+ function distance(dx,dy){
+    return Math.sqrt(dx*dx + dy*dy);
+}
+```
+* ```javascript
+ function distance(x1,y1,x2,y2){
+    var dx = x2 - x1;
+    var dy = y2 - y1;
+    return Math.sqrt(dx*dx + dy*dy);
+}
 ```
 ---
 
-## 检测浏览器支持情况
+## 度转换为弧度
 
 @state: black, @fragment
+
+* ![Alt text](./1415783756399.png)
+
+
+
 
 * ```javascript
-  try{
-	document.createElement('canvas').getContext('2d');
-	document.getElementById('diagonal').innerHTML 
-	= 'HTML5 Canvas is supported in your browser.';
-  }
-  catch(e){
-  	document.getElementById('diagonal').innerHTML 
-  	= 'HTML5 Canvas is not supported in your browser.';
-  }
+ function degreesToRadians(angle){
+    return angle*(Math.PI/180);
+}
 ```
+* <iframe src="http://jsbin.com/ruqeziziyo/1/watch?js,console" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
 ---
 
 ## Canvas画布
@@ -71,7 +89,9 @@
 
 ## 设置Canvas样式
 
-@state: black, @fragment
+    var ba=1;
+
+    var a =1;
 
 * ```html
 <canvas id="diagonal"></canvas>
@@ -89,7 +109,7 @@
 
 ## 一块Canvas画布
 
-<iframe src="http://jsbin.com/zenim/2/embed?html,output" class="" id="" style="border: 1px solid rgb(170, 170, 170); width: 100%; min-height: 600px;"></iframe>
+
 
 ---
 
